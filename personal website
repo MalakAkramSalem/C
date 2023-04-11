@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int main() {
+    FILE *fp;
+
+    fp = fopen("index.html", "w");
+
+    if (fp == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    fprintf(fp, "<!DOCTYPE html>\n");
+    fprintf(fp, "<html>\n");
+    fprintf(fp, "  <head>\n");
+    fprintf(fp, "    <title>Malak's Personal Website</title>\n");
+    fprintf(fp, "    <style>\n");
+    fprintf(fp, "      body {\n");
+    fprintf(fp, "        background-color: #87CEFA;\n");
+    fprintf(fp, "        color: #fff;\n");
+    fprintf(fp, "        font-family: Arial, sans-serif;\n");
+    fprintf(fp, "      }\n");
+    fprintf(fp, "      h1 {\n");
+    fprintf(fp, "        font-size: 48px;\n");
+    fprintf(fp, "        text-align: center;\n");
+    fprintf(fp, "        margin-top: 100px;\n");
+    fprintf(fp, "      }\n");
+    fprintf(fp, "      img {\n");
+    fprintf(fp, "        display: block;\n");
+    fprintf(fp, "        margin: 0 auto;\n");
+    fprintf(fp, "        border-radius: 50%;\n");
+    fprintf(fp, "        width: 200px;\n");
+    fprintf(fp, "        height: 200px;\n");
+    fprintf(fp, "      }\n");
+    fprintf(fp, "      a {\n");
+    fprintf(fp, "        color: #fff;\n");
+    fprintf(fp, "        text-decoration: none;\n");
+    fprintf(fp, "      }\n");
+    fprintf(fp, "      a:hover {\n");
+    fprintf(fp, "        text-decoration: underline;\n");
+    fprintf(fp, "      }\n");
+    fprintf(fp, "    </style>\n");
+    fprintf(fp, "  </head>\n");
+    fprintf(fp, "  <body>\n");
+    fprintf(fp, "    <h1>Welcome to Malak's Personal Website!</h1>\n");
+    fprintf(fp, "    <img src=\"WhatsApp Image 2023-04-11 at 01.41.18\" alt=\"Malak's photo\">\n");
+    fprintf(fp, "    <p>Hi, I'm Malak akram. I'm a programmer and I love coding.</p>\n");
+    fprintf(fp, "    <p>Connect with me on <a href=\"https://www.facebook.com/malak/\">Facebook</a>.</p>\n");
+    fprintf(fp, "  </body>\n");
+    fprintf(fp, "</html>\n");
+
+    fclose(fp);
+
+    return 0;
+}
